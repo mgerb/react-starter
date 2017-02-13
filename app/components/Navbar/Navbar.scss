@@ -1,47 +1,42 @@
 @import '../../scss/variables';
 
-.Navbar {
-    position: fixed;
+.Navbar__nav {
+    height: 40px;
+    border-bottom: 1px solid $light3;
     display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: $navbarWidth;
-    background-color: $gray2;
-    border-right: 1px solid darken($gray2, 2%);
-    overflow-y: auto;
+    background-color: $light1;
 }
 
 .Navbar__header {
-    min-height: 100px;
     display: flex;
+    height: 50px;
     align-items: center;
-    justify-content: center;
-    background-color: $gray2;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $dark2;
 }
 
 .Navbar__item {
-    min-height: 50px;
+    color: $fontPrimary;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100px;
+    transition: all 0.1s linear;
     text-align: center;
-    color: $white;
-    transition: background-color 0.1s linear;
+    line-height: 40px;
     
     &:hover {
-        background-color: $gray1; 
+        color: $fontSecondary;
+        border-bottom: 2px solid $primaryBlue; 
     }
     
     & + .Navbar__item {
-        border-top: 1px solid $gray1;
+        border-left: 1px solid $light3;
     }
     
 }
 
 .Navbar__item--active {
-    padding-left: 4px;
-    border-right: 4px solid $primaryBlue;
+    color: $fontSecondary;
+    border-bottom: 2px solid $primaryBlue;
 }
