@@ -1,13 +1,17 @@
-# A starter project for React with Webpack 2
+# Starter project for React
+
+- Typescript
+- React
+- React Router 4
+- Webpack 2
+- Yarn
+
+Install yarn
+https://yarnpkg.com/lang/en/docs/install/
 
 ## Commands
 
 - yarn install
 - yarn run dev
 
-http://localhost:3000
-
-npm may be used, but I prefer yarn
-
-`npm install -g yarn`
-
+http://localhost:8080
