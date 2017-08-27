@@ -8,27 +8,22 @@ import NotFound from './pages/NotFound/NotFound';
 //styling
 import './scss/index.scss';
 
-interface Props {
-    
-}
+interface Props {}
 
-interface State {
-    
-}
+interface State {}
 
 export default class Wrapper extends React.Component<Props, State> {
-
-    render() {
-        return (
-            <BrowserRouter>
-                <div>
-                    <Navbar/>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route component={NotFound}/>
-                    </Switch>
-                </div>
-            </BrowserRouter>
-        );
-    }
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
