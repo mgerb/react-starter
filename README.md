@@ -1,9 +1,9 @@
 # Starter project for React
 
 - Typescript
-- React
+- React 16
 - React Router 4
-- Webpack 2
+- Webpack 3
 - Yarn
 
 Install yarn

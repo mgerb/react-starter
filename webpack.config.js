@@ -19,37 +19,37 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
-            loaders: ['babel-loader']
+            use: ['babel-loader']
         }, {
             test: /\.ts(x)?$/,
-            loaders: ['babel-loader', 'ts-loader']
+            use: ['babel-loader', 'ts-loader']
         },{
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract({
-                fallbackLoader: 'style-loader',
-                loader: 'css-loader!postcss-loader!sass-loader'
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: 'css-loader!postcss-loader!sass-loader'
             })
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract({
-                fallbackLoader: 'style-loader',
-                loader: 'css-loader'
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: 'css-loader'
             })
         }, {
             test: /\.svg$/,
-            loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=static/[name].[hash].[ext]'
+            use: 'url-loader?limit=65000&mimetype=image/svg+xml&name=static/[name].[hash].[ext]'
         }, {
             test: /\.woff$/,
-            loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=static/[name].[hash].[ext]'
+            use: 'url-loader?limit=65000&mimetype=application/font-woff&name=static/[name].[hash].[ext]'
         }, {
             test: /\.woff2$/,
-            loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=static/[name].[hash].[ext]'
+            use: 'url-loader?limit=65000&mimetype=application/font-woff2&name=static/[name].[hash].[ext]'
         }, {
             test: /\.[ot]tf$/,
-            loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=static/[name].[hash].[ext]'
+            use: 'url-loader?limit=65000&mimetype=application/octet-stream&name=static/[name].[hash].[ext]'
         }, {
             test: /\.eot$/,
-            loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=static/[name].[hash].[ext]'
+            use: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=static/[name].[hash].[ext]'
         }]
     },
     plugins: [

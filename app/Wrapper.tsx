@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 
-//styling
+// styling
 import './scss/index.scss';
 
 interface Props {}
@@ -13,7 +13,11 @@ interface Props {}
 interface State {}
 
 export default class Wrapper extends React.Component<Props, State> {
-  render() {
+  constructor(props: Props) {
+    super(props);
+  }
+
+  public render() {
     return (
       <BrowserRouter>
         <div>
