@@ -2,9 +2,9 @@
 
 .Navbar__nav {
   height: 40px;
-  border-bottom: 1px solid $light3;
+  border-bottom: 1px solid $light1;
   display: flex;
-  background-color: $light1;
+  background-color: $gray--lighter;
 }
 
 .Navbar__header {
@@ -14,7 +14,7 @@
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $dark2;
+  background-color: $background;
 }
 
 .Navbar__item {
@@ -27,15 +27,15 @@
 
   &:hover {
     color: $fontSecondary;
-    border-bottom: 2px solid $primaryBlue;
+    border-bottom: 2px solid $blue;
   }
 
   & + .Navbar__item {
-    border-left: 1px solid $light3;
+    border-left: 1px solid $gray;
   }
 }
 
 .Navbar__item--active {
   color: $fontSecondary;
-  border-bottom: 2px solid $primaryBlue;
+  border-bottom: 2px solid $blue;
 }

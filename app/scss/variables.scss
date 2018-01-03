@@ -1,21 +1,15 @@
-// colors
-$primaryBlue: #42adf4;
-$white: darken(white, 10%);
+$dark-blue: #1d2938;
+$gray: #293341;
+$gray--lighter: #3A4553;
+$blue: #258de5;
+$blue--lighter: saturate(lighten($blue, 10%), 100%);
+$green: #39ce83;
+$red: #e95779;
+$white: #fff;
+$light1: #e9eef2;
 
-$gray1: #2e3136;
-$gray2: #2a2d32;
-$gray3: #23262a;
-$gray4: #2e3136;
-$gray5: #282b30;
-$gray6: #1e2124;
+$background: $dark-blue;
+$foreground: #53718a;
 
-$light1: #fff;
-$light2: #f4f4f4;
-$light3: #e3e3e3;
-
-$dark2: #3a3f41;
-$dark1: lighten($dark2, 5%);
-$dark3: darken($dark2, 5%);
-
-$fontPrimary: darken($light3, 10%);
-$fontSecondary: darken($light3, 20%);
+$fontPrimary: lighten($gray, 50%);
+$fontSecondary: lighten($gray, 60%);

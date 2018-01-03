@@ -12,7 +12,7 @@ export default class NotFound extends React.Component<Props, State> {
     super(props);
   }
 
-  render() {
+  public render(): any {
     return <div className="NotFound">404 Not Found</div>;
   }
 }
