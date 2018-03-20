@@ -1,21 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './Navbar.scss';
+import './nav-bar.scss';
 
 interface Props {}
 
 interface State {}
 
-export default class Navbar extends React.Component<Props, State> {
+export class NavBar extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
   }
 
-  render() {
+  public render(): JSX.Element {
     return (
-      <div className="Navbar">
-        <div className="Navbar__header">
+      <div>
+        <div className="nav-bar__header">
           <span>React Starter</span>
           <a href="https://github.com/mgerb/react-webpack2-seed">
             GitHub
@@ -23,20 +23,20 @@ export default class Navbar extends React.Component<Props, State> {
           </a>
         </div>
 
-        <div className="Navbar__nav">
+        <div className="nav-bar__nav">
           <NavLink
             to="/"
-            className="Navbar__item"
+            className="nav-bar__item"
             exact
-            activeClassName="Navbar__item--active"
+            activeClassName="nav-bar__item--active"
           >
             Home
           </NavLink>
           <NavLink
             to="/new"
-            className="Navbar__item"
+            className="nav-bar__item"
             exact
-            activeClassName="Navbar__item--active"
+            activeClassName="nav-bar__item--active"
           >
             New
           </NavLink>

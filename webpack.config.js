@@ -7,7 +7,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     app: './app/app.tsx',
-    vendor: ['react', 'react-dom'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -47,11 +46,17 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'static/[name].[hash].[ext]',
-            }
+            },
           },
         ],
       },
     ],
+  },
+  optimization: {
+    occurrenceOrder: true,
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
@@ -60,15 +65,11 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].[hash].css',
       disable: false,
-      allChunks: true
+      allChunks: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html',
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'manifest'],
-      minChunks: 'Infinity',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
