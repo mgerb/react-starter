@@ -14,9 +14,12 @@ A simplified starter project for react/typescript.
 http://localhost:8080
 
 ### TODO:
-Fix extract-text-webpack-plugin. Currently getting an error due to the webpack 4 upgrade.
+- Fix extract-text-webpack-plugin
+Currently getting an error due to the webpack 4 upgrade.
 Everything still seems fine though.
-
 ```
 Entrypoint undefined = extract-text-webpack-plugin-output-filename
 ```
+
+- use favicons-webpack-plugin when it's ready for Webpack 4
+  - currently using [webapp-webpack-plugin](https://www.npmjs.com/package/webapp-webpack-plugin)
