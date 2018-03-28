@@ -24,20 +24,10 @@ export class NavBar extends React.Component<Props, State> {
         </div>
 
         <div className="nav-bar__nav">
-          <NavLink
-            to="/"
-            className="nav-bar__item"
-            exact
-            activeClassName="nav-bar__item--active"
-          >
+          <NavLink to="/" className="nav-bar__item" exact activeClassName="nav-bar__item--active">
             Home
           </NavLink>
-          <NavLink
-            to="/new"
-            className="nav-bar__item"
-            exact
-            activeClassName="nav-bar__item--active"
-          >
+          <NavLink to="/new" className="nav-bar__item" exact activeClassName="nav-bar__item--active">
             New
           </NavLink>
         </div>

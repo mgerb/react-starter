@@ -4,11 +4,10 @@
   "description": "A seed for a simple react application with typescript.",
   "scripts": {
     "build": "webpack -p --progress --colors",
-    "dev": "webpack --progress --colors --watch",
-    "c9": "webpack-dev-server --host 0.0.0.0 --port 8080 --inline --history-api-fallback",
-    "lint": "tslint --project .",
-    "start": "webpack-dev-server --inline --history-api-fallback",
-    "update-latest": "rm -rf node_modules && rm yarn.lock && ncu --upgrade --upgradeAll && yarn install"
+    "dev": "webpack --progress --colors --watch --mode development",
+    "c9": "webpack-dev-server --host 0.0.0.0 --port 8080 --inline --history-api-fallback --mode development",
+    "start": "webpack-dev-server --inline --history-api-fallback --mode development",
+    "lint": "tslint --project ."
   },
   "author": "Mitchell Gerber",
   "license": "MIT",
@@ -17,6 +16,7 @@
     "@types/react-dom": "^16.0.4",
     "@types/react-router-dom": "^4.2.5",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
