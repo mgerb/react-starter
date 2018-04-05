@@ -10,7 +10,7 @@ module.exports = {
     app: ['babel-polyfill', './app/app.tsx'],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].[hash].js',
   },
   resolve: {
@@ -47,6 +47,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'static/[name].[hash].[ext]',
+              publicPath: './.',
             },
           },
         ],
@@ -60,7 +61,7 @@ module.exports = {
     },
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin(['./dist'], {
       verbose: true,
     }),
     new ExtractTextPlugin({
