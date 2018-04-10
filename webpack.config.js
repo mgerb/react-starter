@@ -1,7 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -74,6 +74,6 @@ module.exports = {
       template: './index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new WebappWebpackPlugin('./favicon.png'),
+    new FaviconsWebpackPlugin('./favicon.png'),
   ],
 };
