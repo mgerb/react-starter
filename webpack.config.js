@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './app/app.tsx'],
+    app: ['./app/app.tsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
