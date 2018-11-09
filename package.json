@@ -1,6 +1,6 @@
 {
   "name": "react_starter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A seed for a simple react application with typescript.",
   "scripts": {
     "build": "webpack -p --progress --colors",
